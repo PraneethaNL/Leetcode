@@ -1,16 +1,17 @@
 #question
 #https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/4153/
 #
-
-
-class Solution:
-    def countAndSay(self, n: int) -> str:
-        
-        #will use an array to store the value for each n
+#Algo:
+#will use an array to store the value for each n
         #value for each 'n' will contain a string representing the count of each digit
         #followed by the digit
         #eg: if dp[1]="11" it means, it has one 1
         #eg: if dp[x]="2234" it means, it is actually 224444
+
+class Solution:
+    def countAndSay(self, n: int) -> str:
+        
+        
         
         dp=[]
         dp.append("1")
