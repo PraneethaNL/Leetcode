@@ -1,6 +1,15 @@
 #question
 #https://leetcode.com/explore/interview/card/top-interview-questions-medium/108/trees-and-graphs/787/
 
+#Algo:
+#this is the regular level order/bfs
+#use deque so that we can insert at the start of the queue
+#traverse the que while appending each of its node value to the level list
+# and also append the node children to the que from right, basically append is fine.
+#use the 'direction' flag to toggle from left->right to right->left, start the algo with left->right
+#if right-> left then we'll reverse the level list and then append it to final result.
+
+
 
 # Definition for a binary tree node.
 # class TreeNode:
