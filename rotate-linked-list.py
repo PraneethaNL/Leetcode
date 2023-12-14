@@ -12,7 +12,6 @@ class Solution:
         length=0
 
         temp1=head
-
         #compute length of the list
 
         while temp:
@@ -28,18 +27,14 @@ class Solution:
 
         # left list : traverse the list till the node before that will be head of the rotated list  
         val= length-k-1
-
         temp=head
-
         while val:
             temp=temp.next
             val-=1
         
         head=temp.next
         temp.next=None
-
         temp=head
-
         # traverse till end of the right list starting from new head and assign
         #the end of list to the start of the intial list and break (else TLE)
         while temp:
