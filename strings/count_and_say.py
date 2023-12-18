@@ -6,12 +6,10 @@
         #value for each 'n' will contain a string representing the count of each digit
         #followed by the digit
         #eg: if dp[1]="11" it means, it has one 1
-        #eg: if dp[x]="2234" it means, it is actually 224444
+        #eg: if dp[x]="2234" it means, it is actually 22444
 
 class Solution:
     def countAndSay(self, n: int) -> str:
-        
-        
         
         dp=[]
         dp.append("1")
