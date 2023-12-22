@@ -1,0 +1,31 @@
+#reference - https://wiki.python.org/moin/TimeComplexity
+
+Heap:
+
+push - log(n)
+pop - log(n)
+
+findmax- O(1)
+findmin - O(1)
+
+List:
+
+append = O(1)
+
+len(l) = O(1)
+
+min,max = O(n)
+
+reverse = O(n)
+
+pop = O(n)
+
+Dictionary:
+
+insertion = O(1)
+
+Set:
+
+insertion / add = O(1)
+
+
