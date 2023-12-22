@@ -1,4 +1,4 @@
-#question : Difference Between Ones and Zeros in Row and Column
+#question : Difference Between Ones and Zeros in Row and Column in a 2D grid.
 
 #https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/description/?envType=daily-question&envId=2023-12-14
 

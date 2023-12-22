@@ -1,4 +1,4 @@
-#Question : Longest palindrome substring
+#Question : Longest palindrome substring of a given string
 #https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/780/
 
 #Algo:

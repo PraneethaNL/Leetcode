@@ -17,5 +17,6 @@ class Solution:
             out.extend(self.postorderTraversal(root.left))
             out.extend(self.postorderTraversal(root.right))
             out.append(root.val)
+        
         return out
         
