@@ -6,6 +6,16 @@
 
 # Can you solve it without sorting?
 
+#https://leetcode.com/explore/interview/card/top-interview-questions-medium/110/sorting-and-searching/800/
+
+
+#ALGO:
+
+#min heap
+# kth largest is equal to [len(nums) - k ]th smallest element.
+
+
+import heapq
 
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:

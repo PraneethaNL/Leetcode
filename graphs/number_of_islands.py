@@ -43,7 +43,7 @@ class Solution:
         visited.add((row,col))
         q.append((row,col))
         
-        # to look for adjacent nodes to the given node in all 4 directions
+        # to look for adjacent nodes of the given node in all 4 directions
         directions = [[1,0],[-1,0],[0,1],[0,-1]]
 
         while q:

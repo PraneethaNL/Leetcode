@@ -2,6 +2,7 @@
 
 #https://leetcode.com/problems/exclusive-time-of-functions/description/
 
+#Function_ids start from 0. Range = 0 to N
 
 #ALGO:
 
@@ -12,7 +13,7 @@
 # top of the stack is the id of the function that has started/that is in execution.
 # If the state of the function is 'start', we should preempt the prev function in execution and
 # update it's execution time so far, in it's corresponding position in the 'res' array.
-# 'prev_start_time' will keep track of the actual time when the function that is using the CPU has started.
+# 'prev_start_time' will keep track of the actual time of when the function that is using the CPU has started.
 
 class Solution:
     def exclusiveTime(self, n: int, logs: List[str]) -> List[int]:

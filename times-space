@@ -20,11 +20,17 @@ reverse = O(n)
 
 pop = O(n)
 
+ls.index() - O(n)
+
 DICTIONARY:
+
+len() = O(1)
 
 insertion = O(1)
 
 SET:
+
+len()=O(1)
 
 insertion / add = O(1)
 

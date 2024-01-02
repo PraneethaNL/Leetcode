@@ -1,7 +1,16 @@
+#QUESTION:
+
+#https://leetcode.com/contest/weekly-contest-377/problems/minimum-number-game/
+
+
 import heapq
 class Solution:
     def numberGame(self, nums: List[int]) -> List[int]:
-        res=[]
+
+        #time complexity : O(n (log n)) for sort + O(n)
+        #overall = n log n
+        #this is better than the below solution, space wise - no extra space is needed for returing the list
+        #and in place swapping
 
         # length = len(nums)
         # nums.sort()
@@ -12,6 +21,13 @@ class Solution:
         # return nums
 
         #OR
+
+        #time complexity : n log n for heapify + n (log n for heapop + O(1) for append)
+        #  overall = n log n 
+        # Space complexity - O(n) 
+
+        res: List[int]
+        res=[]
 
         heapq.heapify(nums)
 

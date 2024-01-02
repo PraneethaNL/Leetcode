@@ -13,6 +13,7 @@
 # Output: 2
 # Explanation: 3 is a peak element and your function should return the index number 2.
 
+#https://leetcode.com/explore/interview/card/top-interview-questions-medium/110/sorting-and-searching/801/
 
 #ALGO:
 

@@ -6,7 +6,7 @@
 #https://leetcode.com/problems/number-complement/description/
 
 
-#Aglo:
+#ALGO:
 #convert the given num into binary str
 #append the res string by flipping the corresponding bits in the binary str
 
