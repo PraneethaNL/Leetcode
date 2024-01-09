@@ -34,4 +34,37 @@ len()=O(1)
 
 insertion / add = O(1)
 
+*****OPERATOR OVERLOADING IN PYTHON*****
+
+https://www.geeksforgeeks.org/operator-overloading-in-python/
+
+Consider that we have two objects which are a physical representation of a class (user-defined data type)
+and we have to add two objects with binary ‘+’ operator it throws an error, 
+because compiler don’t know how to add two objects. So we define a method for an operator and
+that process is called operator overloading. We can overload all existing operators but we can’t create a new operator. 
+To perform operator overloading, Python provides some special function or magic function that is automatically invoked when it is associated with that particular operator. 
+For example, when we use + operator, the magic method __add__ is automatically invoked in which the operation for + operator is defined.
+
+EG: overloading the '+' operator.
+
+class A:
+    def __init__(self, a):
+        self.a = a
+ 
+    # adding two objects 
+    def __add__(self, o):
+        return self.a + o.a 
+ob1 = A(1)
+ob2 = A(2)
+ob3 = A("Geeks")
+ob4 = A("For")
+ 
+print(ob1 + ob2)
+print(ob3 + ob4)
+# Actual working when Binary Operator is used.
+print(A.__add__(ob1 , ob2)) 
+print(A.__add__(ob3,ob4)) 
+#And can also be Understand as :
+print(ob1.__add__(ob2))
+print(ob3.__add__(ob4))
 
