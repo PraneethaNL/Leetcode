@@ -1,7 +1,9 @@
 
-#question
+#question - return all the triplets in a list whose sum=0
 
 # https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/776/
+
+#Same logic can be applied to any target value X, instead of 0.
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
