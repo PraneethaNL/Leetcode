@@ -1,6 +1,6 @@
 #QUESTION: All Elements in Two Binary Search Trees
 
-Given two binary search trees root1 and root2, return a list containing all the integers from both trees sorted in ascending order.
+# Given two binary search trees root1 and root2, return a list containing all the integers from both trees sorted in ascending order.
 
 #ALGO:
 # Do inorder traversal of both the trees - this will given us the values of each tree in ascending order.
