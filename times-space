@@ -4,6 +4,8 @@ HEAP:
 
 push - log(n)
 pop - log(n)
+heapify - O(n log n)
+
 
 findmax- O(1)
 findmin - O(1)

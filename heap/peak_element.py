@@ -17,7 +17,7 @@
 
 #ALGO:
 
-#basically max will have neighbors that are less then itself.
+#basically max will have neighbors that are less than itself.
 
 #Use max heap and return the top element in the heap.
 
