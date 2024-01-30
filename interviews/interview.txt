@@ -1,6 +1,10 @@
-Pure:
+PureStorage:
 
 insert_space.py and pure_words.py
+
+### buddy bitmap
+
+https://github.com/wolfsniper2388/Tech_Interviews/blob/master/others/buddy_bitmap.py
 
 ##### if we &(AND) a binary number with 1's we get that number.
 eg: 1011 & 1111 = 1011
@@ -35,3 +39,8 @@ class MyOtherClass:
 
 
 ####  'continue' in python should be used only within a loop, otherwise syntaxerror.
+
+
+#### CHECK THIS REPO
+
+https://github.com/wolfsniper2388/Tech_Interviews/tree/master/others
