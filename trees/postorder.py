@@ -13,9 +13,17 @@
 class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         out = []
+
+        #use res+=, instead of extend. This is faster comparitively
+        
         if root:
-            out.extend(self.postorderTraversal(root.left))
-            out.extend(self.postorderTraversal(root.right))
+            out+=self.postorderTraversal(root.left)
+
+            #out.extend(self.postorderTraversal(root.left))
+
+            out+=self.postorderTraversal(root.right)
+
+            #out.extend(self.postorderTraversal(root.right))
             out.append(root.val)
         
         return out

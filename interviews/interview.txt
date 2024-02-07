@@ -1,5 +1,11 @@
 PureStorage:
 
+### multithreading and multiprocessing in python - https://ioflood.com/blog/python-threading/
+
+multithreading in python does serial execution of the threads since GIL (global interpreter lock) allows
+only serial execution of the threads.
+So for concurrent programming, use the multiprocessing and asyncip modules instead of the threading module.
+
 insert_space.py and pure_words.py
 
 ### buddy bitmap
