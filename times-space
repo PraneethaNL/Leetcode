@@ -4,8 +4,15 @@ HEAP:
 
 push - log(n)
 pop - log(n)
-heapify - O(n log n)
+heapify - O(log n) / O(h) where h - height of the node at which heapify is applied.
+In general when we call the built in heapify we are calling heapify from root node - whose height is log n, so 
+complexity of heapify = O( log n)
 
+https://www.codesdope.com/blog/article/heap-binary-heap/
+
+building a max heap - O(n)  ( from the slides cse 310 fall'23)
+
+heapsort = O(n log n)
 
 findmax- O(1)
 findmin - O(1)

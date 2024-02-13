@@ -1,0 +1,13 @@
+### for palindromes:
+
+check : word == word[::-1]
+
+### to check given no.  n is power of any number m:
+
+while n%m==0:
+    n=n/m
+return n==1
+
+###division of negative numbers:
+
+int(n/m) = will round of -2.33 to -2

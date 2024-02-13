@@ -17,8 +17,8 @@
 
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        #rob1= amount that was robbed at before house
-        #rob2= amount that is robbed at current house
+        #rob1= amount that was robbed before rob2
+        #rob2= amount that is robbed last
 
         # rob1=0
         # rob2=0
