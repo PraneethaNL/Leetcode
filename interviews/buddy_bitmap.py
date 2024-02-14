@@ -34,6 +34,20 @@ def set_bit(A, pos, length):
     if not A or pos<0 or length<=0:
         return
     n = len(A)-1    #last index of A
+
+
+    # we are considering min of these three values - pos+offset, length of the array, position of the left child.
+    # Because we are setting the descendants aswell using the setbit_down function.
+    #It means if we just iterate till the nodes that are of same level as 'pos', then we are good.
+    #because all the nodes that are present after position are descendats of itself or it's sibling.
+    #which we will set anyway by recursivley calling setbit_down.
+    #so, this for loop will iterate at max of 2 times.
+
+
+    #for setting ancestors we are doing x%2 ==0 to know if the curr position is of the right child
+    #in which case A[x-1] will be it's sibling or
+    #if x%2!=0 then the curr position - x is of the left child, then A[x+1] will be it's sibling.
+    
     for x in range(pos, min(n+1,min(pos+length, 2*pos+1))):
         # set self
         if A[x] == 1:
