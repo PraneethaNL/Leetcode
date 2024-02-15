@@ -39,7 +39,7 @@ def set_bit(A, pos, length):
     # we are considering min of these three values - pos+offset, length of the array, position of the left child.
     # Because we are setting the descendants aswell using the setbit_down function.
     #It means if we just iterate till the nodes that are of same level as 'pos', then we are good.
-    #because all the nodes that are present after position are descendats of itself or it's sibling.
+    #because all the nodes that are present after position are descendants of itself or it's sibling.
     #which we will set anyway by recursivley calling setbit_down.
     #so, this for loop will iterate at max of 2 times.
 

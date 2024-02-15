@@ -1,6 +1,6 @@
 #reference - https://wiki.python.org/moin/TimeComplexity
 
-HEAP:
+#### HEAP:
 
 push - log(n)
 pop - log(n)
@@ -17,7 +17,7 @@ heapsort = O(n log n)
 findmax- O(1)
 findmin - O(1)
 
-LIST:
+###### LIST:
 
 append = O(1)
 
@@ -31,13 +31,18 @@ pop = O(n)
 
 ls.index() - O(n)
 
-DICTIONARY:
+##### DICTIONARY:
 
 len() = O(1)
 
 insertion = O(1)
+delete / pop - O(1)
 
-SET:
+eg: 
+map.pop(key_to_be_popped)
+
+
+######   SET:
 
 len()=O(1)
 
