@@ -10,7 +10,7 @@ complexity of heapify = O( log n)
 
 https://www.codesdope.com/blog/article/heap-binary-heap/
 
-building a max heap - O(n)  ( from the slides cse 310 fall'23)
+building a max heap from a list of 'n' elements - O(n)  ( from the slides cse 310 fall'23)
 
 heapsort = O(n log n)
 
