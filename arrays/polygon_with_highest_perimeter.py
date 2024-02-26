@@ -33,13 +33,27 @@
 class Solution:
     def largestPerimeter(self, nums: List[int]) -> int:
         
-        nums.sort()
-        sum=0
-        peri=-1
+        # nums.sort()
+        # sum=0
+        # peri=-1
+        # for i in nums:
+        #     if sum<=i:
+        #         sum+=i
+        #     else:
+        #         peri=max(peri,sum+i)
+        #         sum=sum+i
+        # return peri
+    
+        # OR
+        #Below code is faster, per leetcode
+    
+
+        nums.sort(reverse=True)
+        maxi=0
+
         for i in nums:
-            if sum<=i:
-                sum+=i
-            else:
-                peri=max(peri,sum+i)
-                sum=sum+i
-        return peri
+            maxi=nums.pop(0)
+            if maxi < sum(nums):
+                return maxi+sum(nums)
+        
+        return -1

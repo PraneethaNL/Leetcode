@@ -44,6 +44,10 @@ class Solution:
                         continue
                     if len(sub)<len(res):
                         res=sub
+                    #this break is required so that we stop
+                    #with the current left=i and go to next 
+                    #i/left/iteration since this will be of min
+                    #length for the current left
                     break
                 right+=1
         return res      
