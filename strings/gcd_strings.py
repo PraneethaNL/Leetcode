@@ -14,10 +14,12 @@
 # Output: "AB"
 
 #ALGO:
-#if contatenation of both the strings
+#if concatenation of both the strings
 #in any order is the same
 #it means they are formed by a repeating string.
-#we can compute the gcd of their lengths and it will given us the index after which the prefix is repeated
+#we can compute the gcd of their lengths and it will given us the index after which the prefix is repeated.
+
+#TC= log n - since it's log n for computing gcd
 
 class Solution:
     def gcdOfStrings(self, str1: str, str2: str) -> str:

@@ -13,7 +13,18 @@
 
 #ALGO:
 
-# sum the left tree height and right tree height at every node and return the maximum of it
+# sum the left tree height and right tree height at every node and return the maximum of it.
+
+#We cannot just calculate the depth of left subtree and right subtree at root and add them up.
+#because there can be a situation where the diameter i.e., max number of edges can be present b/w nodes that are under one subtree.
+
+# eg:
+#          4
+#     1           2
+#             3       4
+#           5           6
+#             9         7
+#expected = 6 (9->5->3->2->4->6->7), but we just add left depth+right depth = 1+4=5
 
 # Definition for a binary tree node.
 # class TreeNode:
