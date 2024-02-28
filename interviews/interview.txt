@@ -1,0 +1,61 @@
+PureStorage:
+
+### multithreading and multiprocessing in python - https://ioflood.com/blog/python-threading/
+
+multithreading in python does serial execution of the threads since GIL (global interpreter lock) allows
+only serial execution of the threads.
+So for concurrent programming, use the multiprocessing and asyncip modules instead of the threading module.
+
+insert_space.py and pure_words.py
+
+
+mutex in cpp - https://www.geeksforgeeks.org/std-mutex-in-cpp/
+
+### buddy bitmap
+
+https://github.com/wolfsniper2388/Tech_Interviews/blob/master/others/buddy_bitmap.py
+
+##### if we &(AND) a binary number with 1's we get that number.
+eg: 1011 & 1111 = 1011
+
+
+#### *Why 'self' should be the first arg in python methods - 
+
+eg: when we call the method which does not has self as it's first arg, then I got below error:
+
+TypeError: Solution.find_doubles() takes 1 positional argument but 2 were given
+
+
+In Python, this:
+
+my_object.method("foo")
+... is syntactic sugar, which the interpreter translates behind the scenes into:
+
+MyClass.method(my_object, "foo")
+... which, as you can see, does indeed have two arguments - it's just that the first one is implicit, from the point of view of the caller.
+
+https://stackoverflow.com/questions/23944657/typeerror-method-takes-1-positional-argument-but-2-were-given-but-i-only-pa
+
+This is because most methods do some work with the object they're called on, so there needs to be some way for that object to be referred to inside the method. By convention, this first argument is called self inside the method definition.
+
+Occasionally (but not often), you really don't care about the object that your method is bound to, and in that circumstance, you can decorate the method with the builtin staticmethod() function to say so:
+
+class MyOtherClass:
+
+    @staticmethod
+    def method(arg):
+        print(arg)
+
+
+####  'continue' in python should be used only within a loop, otherwise syntaxerror.
+
+
+#### CHECK THIS REPO
+
+https://github.com/wolfsniper2388/Tech_Interviews/tree/master/others
+
+#### System design:
+
+https://dev.to/theinterviewsage/top-facebook-system-design-interview-questions-31np
+
+
