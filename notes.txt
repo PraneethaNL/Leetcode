@@ -2,6 +2,17 @@
 
 check : word == word[::-1]
 
+#### SWAP numbers:
+    a=a+b
+    b=a-b
+    a=a-b
+
+    or
+    x=x^y  (XOR)
+    y=x^y
+    x=x^y
+
+
 ### to check given no.  n is power of any number m:
 
 while n%m==0:
