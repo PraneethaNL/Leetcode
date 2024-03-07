@@ -49,6 +49,8 @@ class MyOtherClass:
 
 ####  'continue' in python should be used only within a loop, otherwise syntaxerror.
 
+Self : is a pointer to object
+
 
 #### CHECK THIS REPO
 

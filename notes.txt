@@ -24,6 +24,7 @@ return n==1
 int(n/m) = will round of -2.33 to -2
 
 ### in binary search 
+
 mid = left + (right-left)//2
  mid is calculated as above instead of (left+right)//2  - to prevent integer overflow ( not sure if this happens in python, but in c++ and Java)
 
