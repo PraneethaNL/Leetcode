@@ -24,6 +24,9 @@
 
 #TC - O(log n)
 
+#APPROACH 2:
+#Go below
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         #Part1 - finding the pivot index
@@ -72,6 +75,58 @@ class Solution:
             else:
                 left=mid+1
         return -1
+
+#ALGO:
+#keep in mind that the elements are all disctinct per the question, if there are similar numbers then we need to tweak this a bit.
+
+#Intuition - the array will have for sure some part of it sorted, either the left of mid or right of mid
+# eg: 6,7,0,1,2,4,5 - mid = 1, right of mid is sorted by looking
+#to determine this - we compare mid with left and right (bcause in normal sorted array left<mid<right)
+#- if left < mid then left side is sorted otherwise right side is sorted ( mid < right)
+#so, our idea is to find the the sorted part first - our target need not lie in this sorted part
+#so, we determine the sorted half first and then check if our target lies in this sorted half (eg: left <target<mid) or (mid<target<right)
+#if it does not lie in the sorted part then it lies in the unsorted part  and we adjust either left or right pointers depending on which sorted
+#part we first entered.
+
+#TC - O(logn)
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+
+        left =0
+        right=len(nums)-1
+        while left<=right:
+            mid=left+(right-left)//2
+
+            if nums[mid]==target:
+                return mid
+
+            #if left side is sorted => arr[left]<=arr[mid] - normal ascending order
+
+            if nums[left]<=nums[mid]:
+                if nums[left]<=target<=nums[mid]:
+                    right=mid-1
+                #since target is not in the sorted half
+                #got to the right side 
+                else:
+                    left=mid+1
+            #else the right side is sorted
+            else:
+                if nums[mid]<=target<=nums[right]:
+                    left=mid+1
+                else:
+                    right=mid-1
+        return -1
+            
+
+
+
+        
+        
+
+        
+    
+    
         
         
 
