@@ -4,9 +4,13 @@
 
 push - log(n)
 pop - log(n)
-heapify - O(log n) / O(h) where h - height of the node at which heapify is applied.
+
+heapify -converts a list into heap *IN PLACE* -  O(log n) / O(h) where h - height of the node at which heapify is applied.
+
 In general when we call the built in heapify we are calling heapify from root node - whose height is log n, so 
 complexity of heapify = O( log n)
+
+_heapify_max(list)  - O(log n) - IN PLACE max heapify of a list.
 
 https://www.codesdope.com/blog/article/heap-binary-heap/
 
