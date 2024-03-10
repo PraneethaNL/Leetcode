@@ -23,6 +23,8 @@
 
 #TC - O(n) - since we'll visit all the vertices
 
+#https://www.codingninjas.com/studio/problems/find-the-number-of-states_1377943?leftPanelTabValue=PROBLEM
+
 
 from typing import List
 from collections import defaultdict
