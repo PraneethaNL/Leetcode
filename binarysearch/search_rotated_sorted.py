@@ -7,6 +7,9 @@
 # You must write an algorithm with O(log n) runtime complexity.
 
 #ALGO:
+
+#IMP NOTE TO REMEMBER: ONE OF THE HALVES(EITHER TO THE LEFT OF MID OR TO THE RIGHT OF MID) WILL DEFINETLY BE SORTED IN A ROATED SORTED ARRAY.
+
 #https://www.youtube.com/watch?v=uvB-Ns_TVis&ab_channel=NickWhite
 
 #This logic will fail if the array has same elements - eg: [1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1]
@@ -39,8 +42,7 @@ class Solution:
         while left<right:
             mid = left+(right-left)//2
 
-            #if mid val is > val at right, then the smallest element will
-            #be to the left of mid.
+            #if mid val is > val at right, then it means there are smaller numbers to the right of mid.
             if nums[mid]>nums[right]:
                 left=mid+1
             

@@ -1,5 +1,13 @@
 #QUESTION:
-# Same as search in rotated sorted array 1, but here we have duplicate elements
+# Same as search in rotated sorted array 1, but here we have duplicate elements.
+
+#AGLO:
+
+#IMP NOTE TO REMEMBER: ONE OF THE HALVES(EITHER TO THE LEFT OF MID OR TO THE RIGHT OF MID) WILL DEFINETLY BE SORTED IN A ROATED SORTED ARRAY.
+
+
+#We'll do search in rotated sorted array, but we encount same elements then we shrink our search space and continue, so that
+#we can search in the shrinked rotated sorted array.
 
 #TC-O(n/2)
 
