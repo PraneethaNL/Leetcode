@@ -44,6 +44,9 @@ class Solution:
                 indegree[nei]-=1
                 if indegree[nei]==0:
                     que.append(nei)
+        #if length of top_order == no. of courses then 
+        #all the nodes/courses are visited
+        #if it's less than no. of courses then return false
         return len(top_order)==numCourses
         
         

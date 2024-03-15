@@ -2,17 +2,24 @@
 
 #### HEAP:
 
-push - log(n)
-pop - log(n)
+heappush() - log(n)
+heappop() - log(n)
+min or max - O(1)
 
-heapify -converts a list into heap *IN PLACE* -  O(log n) / O(h) where h - height of the node at which heapify is applied.
+heapify() - O(n)
 
-In general when we call the built in heapify we are calling heapify from root node - whose height is log n, so 
-complexity of heapify = O( log n)
 
-_heapify_max(list)  - O(log n) - IN PLACE max heapify of a list.
+heapify an already existing heap -converts a non heap into heap *IN PLACE* -  O(log n) / O(h) where h - height of the node at which heapify is applied.
+
+***to create a heap out of a list(point to note I said list, not heapify an already existing heap) of n elements - O(n)***
+
+heapify(nums) - takes O(n) time.
+
+heappop() - O(log n) := O(1) to pop the top + O(log n ) to heapify the remaining heap.
 
 https://www.codesdope.com/blog/article/heap-binary-heap/
+
+heapify
 
 building a max heap from a list of 'n' elements - O(n)  ( from the slides cse 310 fall'23)
 
