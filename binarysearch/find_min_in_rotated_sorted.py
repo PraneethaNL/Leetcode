@@ -12,7 +12,9 @@
 #ALGO:
 
 #IMP NOTE TO REMEMBER: ONE OF THE HALVES(EITHER TO THE LEFT OF MID OR TO THE RIGHT OF MID) WILL DEFINETLY BE SORTED IN A ROATED SORTED ARRAY.
-
+#we first find the sorted part(either left or right) and then find the min of that.
+#then we proceed with the other half of the array.
+#In binary search, our logic is to keep eliminating one half every time.
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
