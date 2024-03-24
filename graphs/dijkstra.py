@@ -27,6 +27,10 @@
 #ALGO:
 #Similar to BFS, instead of a queue we will use a priority queu/ min heap instead.
 
+#Dijkstra can be applied even when the graph is cyclic.
+
+#when we know that are particular graph has cycles then we will apply dijkstra
+
 #TC- O(n log n)
 
 from typing import List

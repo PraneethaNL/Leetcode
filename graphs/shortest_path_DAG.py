@@ -12,33 +12,89 @@
 #ALGO:
 #Dijkstra with minheap/priority que as it is
 
+#TC = O(no. of edges + n logn) , n-no. of vertices
+
+#OR
+#Topological sort - This is faster- O(v+e)
+
+# We can compute the topological sort of the DAG and using this order we can modify the distances of each node
+#similar to shortest_path_bfs.py 
+
+
 
 from  typing import *
-from collections import defaultdict
+from collections import defaultdict,deque
 from heapq import *
 
 def shortestPathInDAG(n: int, m: int, edges: List[List[int]]) -> List[int]:
-    visited=set()
-    dist=[-1]*n
-    dist[0]=0
 
-    pq=[(0,0)]
+    #DIJKSTRA - O(m+ n log n )
+
+    # visited=set()
+    # dist=[-1]*n
+    # dist[0]=0
+
+    # pq=[(0,0)]
+    # graph=defaultdict(list)
+    # #adj list
+    # for u,v,w in edges:
+    #     graph[u].append((v,w))
+
+
+    # while pq:
+    #     d,node=heappop(pq)
+        
+    #     if node in visited:
+    #         continue
+    #         #will skip the entire code below
+    #     visited.add(node)
+    #     dist[node]=d
+        
+    #     for child, w in graph[node]:
+    #         if child not in visited:
+    #             heappush(pq,(d+w,child))
+    # return dist
+
+    #TOPOLOGICAL SORT- O(v+e)
+
     graph=defaultdict(list)
-    #adj list
+    indegree=[0]*(n)
+    
     for u,v,w in edges:
         graph[u].append((v,w))
+        indegree[v]+=1
+    
+    que=deque()
+    for v in range(n):
+        if indegree[v]==0:
+            que.append(v)
 
+    top_ord=[] 
+    while que:
+        node=que.popleft()
+        top_ord.append(node)
 
-    while pq:
-        d,node=heappop(pq)
-        
-        if node in visited:
-            continue
-            #will skip the entire code below
-        visited.add(node)
-        dist[node]=d
-        
-        for child, w in graph[node]:
-            if child not in visited:
-                heappush(pq,(d+w,child))
+        for child,w in graph[node]:
+           
+            indegree[child]-=1
+            if indegree[child]==0:
+                que.append(child)
+                    
+    
+    #print(top_ord)
+    dist=[float('inf')]*n
+    dist[0]=0
+   
+    inf=10**6
+
+    for node in top_ord:
+        for child,w in graph[node]:
+            if dist[node]<inf and dist[node]+w<dist[child]:
+                dist[child]=dist[node]+w
+                
+
+    for node in range(n):
+        if dist[node]>inf:
+            dist[node]=-1
     return dist
+
